@@ -53,3 +53,30 @@ console.log(typeof naturalNum)  // object
 console.log(typeof myobj)       // object
 console.log(typeof myfunction)  // function object 
 console.log(typeof null)        // object
+
+
+//  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
+// stack(primitive datatype )  & heap memory(non-primitive)
+
+let myName=" Aman"
+
+let mycopyName=myName
+
+mycopyName="raj"
+
+console.log(myName)  // Aman
+console.log(mycopyName) // raj
+
+
+let object1={
+    cityName:"patna",
+    pincode: 803110
+}
+
+let object2=object1;
+
+object2.cityName="bihta"
+
+console.log(object1.cityName) // bihta
+console.log(object2.cityName) // bihta
