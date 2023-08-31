@@ -55,7 +55,20 @@ function sayHii(){
 // console.log(userLoggedIn())  // my name is undefined
 
 
-function userLoggedIn(username){
+// function userLoggedIn(username){
+
+//     if(!username){
+//         console.log(" please enter valid name")
+//         return ;
+//     }
+
+//     return ` my name is ${username} `
+// }
+
+// console.log(userLoggedIn())  
+// console.log(userLoggedIn("Aman"))  
+
+function userLoggedIn(username="Raj"){
 
     if(!username){
         console.log(" please enter valid name")
@@ -65,5 +78,5 @@ function userLoggedIn(username){
     return ` my name is ${username} `
 }
 
-console.log(userLoggedIn())  
-console.log(userLoggedIn("Aman"))  
+console.log(userLoggedIn())  //my name is Raj 
+console.log(userLoggedIn("Aman"))  // my name is Aman
