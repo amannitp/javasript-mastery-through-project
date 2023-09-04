@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        
+    </ul>
+</body>
+<script>
+
+    function addLanguage(langName){
+
+        const list=document.createElement('li')
+        const addText=document.createTextNode(langName)
+        list.appendChild(addText)
+
+        document.querySelector('.language').appendChild(list)
+   
+
+    }
+    addLanguage("javascript")
+    addLanguage("python")
+    addLanguage("java")
+    addLanguage("ruby")
+    addLanguage("perl")
+
+
+    const secondLang=document.querySelector("li:nth-child(2)")
+    console.log(secondLang)
+
+    const newList=document.createElement('li')
+    const addnode=document.createTextNode("MOJO")
+    newList.appendChild(addnode)
+
+    secondLang.replaceWith(newList)
+
+    secondLang.replaceWith(secondLang,newList)
+
+    //edit
+
+    const firstList=document.querySelector('li')
+
+    const newli=document.createElement('li')
+    newli.appendChild(document.createTextNode("TypeScript"))
+
+    firstList.replaceWith(newli)
+
+    // edit
+    const thirdLang=document.querySelector("li:nth-child(3)")
+
+    thirdLang.outerHTML="<li>Go</li>"
+
+    // remove
+
+    const lastLang=document.querySelector("li:last-child")
+   
+    lastLang.remove()
+    
+</script>
+</html>
