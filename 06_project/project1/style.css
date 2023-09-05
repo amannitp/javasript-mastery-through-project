@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.button{
+    width: 100px;
+    height: 100px;
+}
+#blue{
+    background-color: blue;
+}
+#red{
+    background-color: red;
+}
+#yellow{
+    background-color: yellow;
+}
+#chocolate{
+    background-color: chocolate;
+}
