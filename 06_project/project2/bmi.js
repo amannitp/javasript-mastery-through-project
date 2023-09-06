@@ -9,12 +9,13 @@ form.addEventListener("submit",(e)=>{
 
     // console.log(e)
 
-    const weight=parseInt(document.querySelector("#weight").value)
-    const height=parseInt(document.querySelector('#height').value)
+    let weight=document.querySelector("#weight").value
+    let height=document.querySelector('#height').value
     const result=document.querySelector('.result')
 
-    console.log(weight)
-    console.log(height)
+    
+
+ 
     
     if(height==='' || height <0 || isNaN(height)){
       
@@ -23,6 +24,8 @@ form.addEventListener("submit",(e)=>{
     }else if(weight ==='' || weight <0 || isNaN(weight)){
         result.innerHTML=" Please Enter the valid weight"
     }else{
+        weight=parseInt(weight)
+        height=parseInt(height)
         const bmi=((weight*10000)/(height*height)).toFixed(2);
         result.innerHTML=`<span>${bmi}</span>`
 
