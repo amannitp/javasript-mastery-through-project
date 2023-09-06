@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.clock{
+    width: 100px;
+    height: 20px;
+    background-color:#212121;
+    color: #ffff;
+    padding:10px;
+    text-align: center;
+    border-radius: 5px;
+   
+}
