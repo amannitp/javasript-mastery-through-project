@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <li><img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id1" ></li>
+            <li><img src="https://images.unsplash.com/photo-1693856758403-bba589db78dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id2" ></li>
+            <li><img src="https://images.unsplash.com/photo-1510245876705-9309e4100fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id3"></li>
+            <li><img src="https://images.unsplash.com/photo-1496324251729-f9186ca1be43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id4"></li>
+           
+        </ul>
+    </div>
+</body>
+    <script>
+        document.querySelector('#images').addEventListener('click',function(e){
+            //e.stopPropagation()
+
+            console.log(e)
+            console.log(e.target)
+            console.log(e.target.parentNode)
+            console.log(e.target.tagName)
+            console.log(e.target.id)
+
+            const removeIt=e.target.parentNode;
+            
+            if(e.target.tagName==='IMG'){
+                // 1st approch
+            //removeIt.remove()
+
+            //2nd approach
+            removeIt.parentNode.removeChild(removeIt)
+
+            }
+            
+
+        })
+    </script>
+</html>
