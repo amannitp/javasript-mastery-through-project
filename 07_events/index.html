@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="images">
+            <li><img src="https://plus.unsplash.com/premium_photo-1675314768267-b6ac0b096e07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id1" ></li>
+            <li><img src="https://images.unsplash.com/photo-1693856758403-bba589db78dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id2" ></li>
+            <li><img src="https://images.unsplash.com/photo-1510245876705-9309e4100fb8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id3"></li>
+            <li><img src="https://images.unsplash.com/photo-1496324251729-f9186ca1be43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=60" alt="" id="id4"></li>
+           
+        </ul>
+    </div>
+</body>
+<script>
+    // 1 way onclick="alert('image 2')"
+   // 2 way document.getElementById('id2').onclick=function(){
+    //     alert('image 2 is clicked')
+    // }
+ 
+    //3 way and best way to use because it provide more functionality or information about browser and enviroment
+    document.getElementById('id2').addEventListener('click',function(e){
+        //alert(" image 2 is clicked again")
+    //    const xPositon= e.x
+    //    const yPositon= e.y
+
+    //    console.log(xPositon)
+    //    console.log(yPositon)
+        //console.log(e)
+
+        console.log(" imag2 clicked")
+    },false)
+
+        document.getElementById('images').addEventListener('click',function(e){
+          e.stopPropagation() // stop event propagation
+
+            console.log('ul ix clicked')
+        },true)
+  
+
+
+</script>
+<script src="01_eventbasics.js"></script>
+</html>

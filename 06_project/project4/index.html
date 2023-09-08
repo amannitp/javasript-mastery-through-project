@@ -1,31 +1,33 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="guessNumber.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="guessNumber.css" />
     <title>Guess the Numbert</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
       <h1 class="gameName">Number guessing game</h1>
-      <p class="para">try and guess a random number between 1 to 100 <br> you have 10 attemps to guess the number</p>
+      <p class="para">
+        try and guess a random number between 1 to 100 <br />
+        you have 10 attemps to guess the number
+      </p>
       <h1 class="number">Guess a number</h1>
 
-      <form >
-
-        <input type="text" class="input"><br>
+      <form>
+        <input type="text" class="input" /><br />
         <button class="btn">Submit Guess</button>
       </form>
-      <div>
-        <p class="prevGuess"> Previous Guess is : </p>
-        <p class="guessRemain"> remaining guess is : </p>
-        <p class="win"></p>
-  
+      <div class="main-div">
+        <p>Previous Guess is : <span class="prevGuess"></span></p>
+        <p>remaining guess is : <span class="guessRemain"></span></p>
+        <p class="lowOrHigh"></p>
+
+        
       </div>
+      <div class="finalResult"></div>
     </div>
-</body>
-<script src="guessNumber.js"></script>
+  </body>
+  <script src="guessNumber.js"></script>
 </html>
