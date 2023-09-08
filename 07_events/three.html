@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events </title>
+</head>
+<body>
+    <h1> Event Tutorial</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+
+<script>
+
+
+const sayDate = function (name) {
+    console.log(name, Date.now());
+}
+
+let intervalRef = setInterval(sayDate, 1000, "Aman");
+
+let check = true;
+
+document.querySelector("#stop").addEventListener('click', function () {
+    console.log("Stopped");
+    clearInterval(intervalRef);
+    check = false;
+});
+
+document.querySelector('#start').addEventListener('click', function () {
+    if (!check) {
+        console.log("Starting");
+        intervalRef = setInterval(sayDate, 1000, "Aman");
+        check = true;
+    }
+});
+
+   
+
+   
+</script>
+</html>
