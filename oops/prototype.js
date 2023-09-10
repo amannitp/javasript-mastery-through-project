@@ -55,7 +55,7 @@ let heroPower={
 }
 
 Object.prototype.aman=function(){
-    console.log(" Aman is present in all object")
+   // console.log(" Aman is present in all object")
 }
 
 
@@ -68,9 +68,48 @@ console.log("spidy power is: ",spidyPower)
 
 Array.prototype.heyAman=function(){
 
-    console.log("Aman say hello")
+    //console.log("Aman say hello")
 }
 myHeros.heyAman() // Aman say hello
 // heroPower.heyAman() // error  heroPower.heyAman is not a function
+
+
+// inheritance   __proto__
+
+ const user={
+    name:"aman",
+    email:"aman@gmail.com"
+ }
+ const Teacher={
+    skill:"JS"
+ }
+
+ const TeachingSupport={
+    isAvailable:true
+ }
+
+ const TASupport={
+    makeAssigment:" js Assigmnent",
+    fullTime:true,
+    __proto__:TeachingSupport  // inheritance
+ }
+ Teacher.__proto__=user // inheritance
+
+
+ // modern syntax
+ Object.setPrototypeOf(TeachingSupport,Teacher)
+
+
+ let anotherUserName=" raj          "
+
+ String.prototype.trueLength=function(){
+    //console.log(`${this.name}`)
+    console.log(this)
+    console.log(`True length is : ${this.trim().length}`)
+ }
+ anotherUserName.trueLength()
+ "aman   ".trueLength()
+ "AMit  ".trueLength()
+
 
 
