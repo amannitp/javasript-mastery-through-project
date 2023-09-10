@@ -23,13 +23,54 @@ createUser.prototype.increment=function(){
 }
 createUser.prototype.printMe=function(){  // to write     
    // .prototype is optional
-    console.log(`price is ${this.score}`)  //200
+   // console.log(`price is ${this.score}`)  //200
     return ++(this.score);
 }
 
 const user1=new createUser("aman",200)
 const user2=new createUser("raj",400)
 
-console.log(user1.printMe())              // 201
-console.log(user2)
+// console.log(user1.printMe())              // 201
+// console.log(user2)
+
+
+// prototype
+
+const myName="Aman        "
+
+// console.log(myName.length)
+// console.log(myName.trim().length)
+
+
+let myHeros=['thor',"spiderman"]
+
+let heroPower={
+    thor:"hammer",
+    spider:"sling",
+    getSpiderPower:function(){
+
+        //console.log(`spidy power is ${this.spider}`)
+        return this.spider
+    }
+}
+
+Object.prototype.aman=function(){
+    console.log(" Aman is present in all object")
+}
+
+
+
+let spidyPower=heroPower.getSpiderPower()
+
+console.log("spidy power is: ",spidyPower)
+// heroPower.aman() //  Aman is present in all object
+// myHeros.aman()   // Aman is present in all object
+
+Array.prototype.heyAman=function(){
+
+    console.log("Aman say hello")
+}
+myHeros.heyAman() // Aman say hello
+// heroPower.heyAman() // error  heroPower.heyAman is not a function
+
 
