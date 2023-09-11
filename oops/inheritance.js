@@ -29,3 +29,4 @@ console.log(teacher1===user1)
 console.log(teacher1 instanceof user)
 console.log(user1 instanceof Teacher)
 
+
