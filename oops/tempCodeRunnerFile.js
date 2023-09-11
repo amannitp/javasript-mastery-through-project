@@ -1,3 +1,3 @@
-console.log(multiplyBy5(5))       //25
-// console.log(multiplyBy5.power)    // 2
-// console.log(multiplyBy5.prototype) // {}
+console.log(user1)
+// console.log(user1.password)
+// console.log(user1.email)
