@@ -29,32 +29,49 @@ const user1=new User("a@12423","abc")
 
 // getter and setter through function 
 
-function obj(email,password){
-    this.email=email;
-    this.password=password
+// function obj(email,password){
+//     this.email=email;
+//     this.password=password
 
-    Object.defineProperty(this,'email',{
-        get: function(){
-            return this._email.toUpperCase()
+//     Object.defineProperty(this,'email',{
+//         get: function(){
+//             return this._email.toUpperCase()
 
-        },
-        set :function(value){
-            this._email=value
+//         },
+//         set :function(value){
+//             this._email=value
 
-        }
-    }),
+//         }
+//     }),
 
-    Object.defineProperty(this,'password',{
-        get: function(){
-            return this._password.toUpperCase()
+//     Object.defineProperty(this,'password',{
+//         get: function(){
+//             return this._password.toUpperCase()
 
-        },
-        set :function(value){
-            this._password=value
+//         },
+//         set :function(value){
+//             this._password=value
 
-        }
-    })
+//         }
+//     })
 
+// }
+// const myobj=new obj("Aaman@132342","sdfg")
+// console.log(myobj.email)
+
+// object base gettter and setter method 
+
+const objname={
+    _email:"aman@1234",
+    _password:"1123",
+
+    get email(){
+        return this._email.toUpperCase()
+    },
+    set(value){
+        this._email=value
+
+    }
 }
-const myobj=new obj("Aaman@132342","sdfg")
-console.log(myobj.email)
+const obj1=Object.create(objname)
+console.log(obj1.email)
