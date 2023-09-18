@@ -6,13 +6,18 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn">click me</button>
+    <button id="myButton">click me</button>
     
 </body>
 <script>
-    document.getElementById("btn").addEventListener("click", function(event) {
-  console.log("Event type:", event.type);
+    // event type 
+//     document.getElementById("btn").addEventListener("click", function(event) {
+//   console.log("Event type:", event.type);
+// });
+document.getElementById("myButton").addEventListener("click", function(event) {
+  console.log("Event target:", event.target);
 });
+
 
 </script>
 </html>
